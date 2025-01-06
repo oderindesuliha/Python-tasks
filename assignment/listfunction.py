@@ -102,7 +102,7 @@ combined_list = combine_list(characters, numbers)
 print("The result is:" , combined_list)
 
 def return_list(numbers):
-	numbers = [int(count) for count in numbers.split()]
+	numbers = [int(count) for count in numbers]
 	return numbers
 numbers = input("enter numbers: ")
 number_list = return_list(numbers)
