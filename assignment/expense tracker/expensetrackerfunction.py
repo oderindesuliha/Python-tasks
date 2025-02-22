@@ -1,5 +1,6 @@
-def get_expensetracker():
-	choice()
+date = []
+description = []
+amount = []
 def choice():
 	option = 0
 		
@@ -18,6 +19,12 @@ def choice():
 	while option not in [1, 2, 3, 4]:
 		option = int(input("invalid input!.......Enter either 1, 2, 3, 4 : "))
 		
+		if  option == 1:
 	
+		option = int(input("Enter the date(YYYY-MM-DD): "))
+		option = str(input("Enter the description: "))
+		option = int(input("Enter the amount: "))
+print("Expense added!")
 
-print(get_expensetracker())
+
+print(choice())
