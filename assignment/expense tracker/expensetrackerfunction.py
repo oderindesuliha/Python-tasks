@@ -1,11 +1,13 @@
 date = []
 description = []
 amount = []
+
+print("Welcome to Semicolon Expense Tracker App")
+	
+print("----------------------------------------------------")
+		
 def choice():
 	option = 0
-		
-	print("Welcome to Semicolon Expense Tracker App")
-	print("----------------------------------------------------")
 		
 
 	print("""
@@ -29,10 +31,10 @@ def choice():
 	choice()
 	
 	if  option == 2:
-		print("Expenses: ")
-		option = str(input("Enter the date(YYYY-MM-DD): "))
-		option = str(input("Enter the description: "))
-		option = float(input("Enter the amount: "))
+		print("Expenses: ")	
+	option = str(input("Enter the date(YYYY-MM-DD): ")) 
+	option = str(input("Enter the description: "))
+	option = float(input("Enter the amount: "))
 
 	choice()
 
