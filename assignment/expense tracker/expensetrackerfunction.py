@@ -1,19 +1,23 @@
-class expenseapp:
-	def get_expensetracker():
-		choice()
+def get_expensetracker():
+	choice()
+def choice():
+	option = 0
+		
+	print("Welcome to Semicolon Expense Tracker App")
+	print("-----------------------------------------------------------")
+		
 
-	def choice():
-		print("""Welcome to Semicolon Expense Tracker App
-		-----------------------------------------------------------
-	
+	print("""
 		options:
 		1. Add an expense
 		2. View all expenses
 		3. Calculate total expenses
 		4. Exit 
-		
 		""")
-
+	option = int(input("Enter your choice: "))
+	while option not in [1, 2, 3, 4]:
+		option = int(input("invalid input!.......Enter either 1, 2, 3, 4 : "))
 		
 	
 
+print(get_expensetracker())
