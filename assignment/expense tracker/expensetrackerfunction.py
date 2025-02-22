@@ -5,7 +5,7 @@ def choice():
 	option = 0
 		
 	print("Welcome to Semicolon Expense Tracker App")
-	print("-----------------------------------------------------------")
+	print("----------------------------------------------------")
 		
 
 	print("""
@@ -26,6 +26,25 @@ def choice():
 		option = float(input("Enter the amount: "))
 	print("Expense added!")
 
-choice()
+	choice()
+	
+	if  option == 2:
+		print("Expenses: ")
+		option = str(input("Enter the date(YYYY-MM-DD): "))
+		option = str(input("Enter the description: "))
+		option = float(input("Enter the amount: "))
+
+	choice()
+
+	if  option == 3:
+		option = float(input("Total Expenses: "))
+
+	choice()
+
+	if  option == 4:
+		print("Exiting the app. Goodbye!")
+
+	
+
 
 print(choice())
