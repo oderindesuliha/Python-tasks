@@ -3,7 +3,7 @@ import expensetrackerfunction
 
 class Testexpensetracker(unittest.TestCase):
 	
-	def test_that_prime_number_function_exists(self):
+	def test_that_the_expense_tracker_function_exists(self):
 		expensetrackerfunction.get_expensetracker()
 
 	
