@@ -1,0 +1,14 @@
+import unittest
+import sum_of_even_functions 
+
+
+class TestSumOfEvenNumbers(unittest.TestCase):
+
+	def test_sum_of_even_numbers_function_exists(self):
+		#expected = get_sum("234frfdrgtyhujiiikolp;'665433")
+		#actual = 22
+		#self.assertEqual(expected, actual)
+
+number = input("enter number: ")
+value = get_palindrome(number)
+print(number , value)

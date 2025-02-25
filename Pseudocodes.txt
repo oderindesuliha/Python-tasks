@@ -1,0 +1,34 @@
+Largest number
+Stage 1
+1. Read an array that enters list of elements
+2. Determine the largest number
+3. Display result
+
+Stage 2
+1. Prompt a user to enter an array
+2. Assume the first element in the array is the largest3
+3. Initialize the largest to 0
+4. Compare the largest with the other elements in the array
+5. If largest is greater than an element in the array, collect largest
+6. Otherwise, collect the element as largest
+7. Collect largest
+8. Display largest
+ 
+Correction 
+1. Prompt a user to enter an array with numbers 
+2. Assume the first element in the array is the largest3
+3. Initialize the first element In the array to the largest variable 
+4. Compare the largest with the other elements in the array
+5. If largest is greater than an element in the array, collect largest
+6. Otherwise, collect the element as largest
+7. Collect largest
+8. Display largest
+
+Reverse array
+Stage 2
+1. Prompt a user to enter an array
+2. Collect another array of the same length and equate to 0
+3. Loop through the initial array by subtracting 1 from the length of the array
+4. Reverse by iterating from count 0 till the last element in the array
+5. Collect the reversed array
+6. Display reversed array

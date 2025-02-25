@@ -1,13 +1,13 @@
 class arraykata:
-	def maximum_in(number):
-		maximum = number[0]	
-		for count in number:
-			if count > maximum:
-				maximum = count
-			return maximum
-	number = [-10, -2, 500, -3, 20, -9]
-	maximum_number = maximum_in(number)
-	print("The maximum number is :" , maximum_number) 
+	def maximum_in(numbers):
+		maximum = numbers[0]
+		for number in numbers:
+			if number > maximum:
+				maximum = number
+		return maximum
+	numbers = [-10, -2, 500, -3, 20, -9]
+	maximum_number = maximum_in(numbers)
+	print("The maximum number is: " , maximum_number) 
 
 	def minimum_in(number):
 		minimum = number[0]
@@ -17,7 +17,7 @@ class arraykata:
 		return minimum
 	number = [10, 200, 500, 30, 85, 90]
 	minimum_number = minimum_in(number)
-	print("The minimum number is :" , minimum_number) 
+	print("The minimum number is: " , minimum_number) 
 
 	def sum_of_list(element):
 		sum = 0 

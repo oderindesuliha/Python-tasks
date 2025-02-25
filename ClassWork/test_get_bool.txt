@@ -1,0 +1,12 @@
+def get_true/false_for_even/old(elements)-> bool:
+	result = []
+	for count in range(len(elements)):
+		if count % 2 == 0:
+		result.append(true)
+	return true result
+		if count % 2 == 1:	
+		result.append(false)      
+	return result
+elements = [4, 9, 7, 8, 3]	
+list_of_boolean = positions(elements)
+print(list_of_boolean)
