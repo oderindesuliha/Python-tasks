@@ -1,75 +1,30 @@
-from datetime import datetime
-
+import re
 expenses = []
 
 def add_expense(date, description, amount):
-	expenses.append({"date": date, "description": description, "amount": amount})  	
-	print("Expenses added!\n")
-	choice = int(input(option_list))
-	main_menu(choice)
+	date_regex = re.compile(r"^(?P<year>\d{4})-(?P<month>0[1-9]|1[0-2])-(?P<day>0[1-9]|[12]\d|3[01])$")
+	
+	if action in [2,3]:
+		match = date_regex.match(date)
+		if not match:
+			raise ValueError("Invalid date")
 
-def view_expenses():
-	print("\nExpenses:")
-	count = 0
+		if description.startswith(" "):
+			raise ValueError("Invalid description")
+
+		if not amount.isdigit():
+			raise ValueError("Invalid amount")
+
+		if int(amount) < 0:
+			raise ValueError("Invalid amount")
+
+		expenses.append({'date': date,'description': description,'amount': amount})
+	
+		return "Expense added!"
+	raise ValueError("No valid action performed to add expense")
+
+def view_all_expenses():
 	for count in range(len(expenses)):
 		expense_list = expenses[count]
-		print(f"{count + 1}. Date: {expense_list['date']}, Description: {expense_list['description']}, Amount: ₦{expense_list['amount']:.2f}\n")
-			
-	choice = int(input(option_list))
-	main_menu(choice)
+	return(f"{count + 1}. Date: {expense_list['date']}, Description: {expense_list['description']}, Amount: ₦{expense_list['amount']:.2f}\n")
 
-def calculate_total():
-	
-	total = sum(expense_list['amount']for expense_list in expenses)
-	print(f"\nTotal Expenses: ₦{total:.2f}\n")  
-	choice = int(input(option_list))
-	main_menu(choice)
-
-
-def main_menu(choice):
-	while choice not in [1, 2, 3, 4]:
-		print(option_list)
-		choice = int(input("Please enter a valid option: "))
-
-	if choice == 1:
-		year=int(input("\nPlease enter year: "))
-		while year < 1900 or year > datetime.now().year:
-			year = int(input("Invalid year..... enter a year between 1900 and 2025: "))
-		month=int(input("\nPlease enter month: "))
-		while month < 1 or month > 12:
-			month = int(input("Invalid month..... enter a month between 1 and 12: "))
-		day=int(input("\nPlease enter day: "))
-		while day < 1 or day > 31:
-			day = int(input("Invalid day...... enter a day between 1 and 31: "))
-		
-		date = f"{year}-{month:02d}-{day:02d}"
-		print(f"\nEnter the date(YYYY-MM-DD): {date}")
-		
-		description=input("\nEnter the description: ")
-		amount=float(input("\nEnter the amount: "))
-		while amount < 0:
-			amount = float(input("Invalid amount"))
-		add_expense(date, description, amount)
-
-	if choice == 2:
-		view_expenses()
-
-	if choice == 3:
-		calculate_total()
-
-	if choice == 4:
-		print("Exiting the app. Goodbye!")
-
-
-
-print("WELCOME TO SEMICOLON EXPENSE TRACKER APP")
-print("-" * 45)
-
-option_list = ("1. Add an expense\n"
-		"2. View all expenses\n"
-		"3. Calculate total expenses\n"
-		"4. Exit\n"
-		"\nEnter your choice: ")
-
-choice = int(input(option_list))
-main_menu(choice)
